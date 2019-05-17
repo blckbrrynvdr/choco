@@ -1,0 +1,26 @@
+
+
+.features__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.features__item {
+  display: flex;
+}
+
+.features__pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(65px);
+  height: rem(45px);
+  margin-right: rem(10px);
+}
+
+.features__img {
+  max-width: 100%;
+  stroke: $light-blue;
+  fill:$blue;
+}

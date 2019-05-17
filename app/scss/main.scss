@@ -1,3 +1,16 @@
 @import "fonts";
 
+@import "template/normalize";
+@import "template/variables";
+@import "template/adaptive";
+@import "template/base";
+
+@import "blocks/main-section";
 @import "blocks/header";
+@import "blocks/header-menu";
+@import "blocks/features";
+@import "blocks/why";
+@import "blocks/because";
+@import "blocks/menu";
+@import "blocks/comments";
+@import "blocks/comment";

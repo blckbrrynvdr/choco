@@ -1,0 +1,57 @@
+.main__section {
+  background: url(../images/main-bg.png) right bottom / contain no-repeat ;
+  background-color: $blue;
+  color: #fff;
+  position: relative;
+  padding-bottom: rem(46px);
+}
+
+.main__content-wrapper {
+  flex: 1;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main__content {
+  z-index: 2;
+  margin: auto 0;
+}
+
+.main__title {
+  margin-bottom: rem(22px);
+}
+
+.main__desc {
+  font-family: $regular;
+  font-size: rem(21px);
+  width: 75%;
+  margin-bottom: rem(32px);
+}
+
+.main__pictures {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: -31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__cover {
+  display: block;
+  max-width: 100%;
+}
+
+.main__berries-pic {
+  position: absolute;
+  bottom: rem(-80px);
+  right: rem(20px);
+}
+
+.main__foliage-pic {
+  position: absolute;
+  bottom: rem(-98px);
+
+}

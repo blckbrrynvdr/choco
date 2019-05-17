@@ -1,6 +1,29 @@
-.header{
-    background: black;
+.header {
+    
+    display: flex;
+    padding-top: rem(24px);
+    justify-content: space-between;
+    align-items: center;
 }
-body{
-    background: #ccc;
+
+.header__nav {
+    width: 70%;
 }
+
+.header__phone {
+    display: flex;
+    align-items: center;
+
+}
+
+.header__phone-logo {
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+}
+
+.header__phone-number {
+    color: inherit;
+    font-size: rem(24px);
+}
+

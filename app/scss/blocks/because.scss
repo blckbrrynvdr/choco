@@ -1,0 +1,51 @@
+.because {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  &:last-child {
+    .because__logo::after {
+      display: none;
+    }
+  }
+}
+
+.because__logo {
+  width: rem(125px);
+  height: rem(125px);
+  background-color: $light-gray;
+  border-radius: 50%;
+  padding: rem(27px);
+  position: relative;
+  margin-bottom: rem(35px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:after {
+    content: '';
+    width: rem(67px);
+    height: rem(21px);
+    background: url(../images/because-bg.png) center center / cover no-repeat;
+    position: absolute;
+    right: -110%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.because__picture {
+  max-width: 100%;
+  stroke: $black;
+  fill: $light-gray;
+}
+
+.because__title {
+  font-size: rem(27px);
+  margin-bottom: rem(30px);
+}
+
+.because__desc {
+  font-family: $light;
+  color: $gray;
+}
