@@ -15,6 +15,9 @@
   &.active {
     .menu__content {
       max-width: rem(630px);
+      @include tablets {
+        max-width: rem(400px);
+      }
     }
     .menu__desc {
       opacity: 1;
@@ -23,13 +26,13 @@
 }
 
 .menu__button {
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   color: inherit;
-  width: rem(100px);
+  min-width: rem(100px);
   background: center center / cover no-repeat;
   position: relative;
+  @include phones {
+    min-width: rem(60px);
+  }
 }
 
 .menu__button-text {
@@ -49,13 +52,25 @@
   top: 0;
   right: 0;
   bottom: 0;
+  &.active {
+    width: 100%;
+    justify-content: flex-end;
+    .menu__item.active {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 3;
+    }
+  }
 }
 
 .menu__content {
   background: rgba(18, 19, 20, 0.8);
   max-width: 0;
   overflow: hidden;
-  transition: max-width .3s ease-out;
+  transition: max-width .3s linear;
 }
 
 .menu__desc {
@@ -63,6 +78,6 @@
   line-height: 1.8;
   padding: rem(55px) rem(27px);
   opacity: 0;
-  transition: opacity .3s ease-out;
+  transition: opacity .3s linear;
   transition-delay: .3s;
 }

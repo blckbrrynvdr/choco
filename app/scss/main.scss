@@ -3,14 +3,27 @@
 @import "template/normalize";
 @import "template/variables";
 @import "template/adaptive";
+@import "template/animate";
 @import "template/base";
 
 @import "blocks/main-section";
 @import "blocks/header";
 @import "blocks/header-menu";
+@import "blocks/hamburger";
 @import "blocks/features";
 @import "blocks/why";
 @import "blocks/because";
 @import "blocks/menu";
 @import "blocks/comments";
 @import "blocks/comment";
+@import "blocks/team";
+@import "blocks/map";
+@import "blocks/footer";
+@import "blocks/socials";
+@import "blocks/delivery";
+@import "blocks/form";
+@import "blocks/assortment";
+@import "blocks/modal";
+@import "blocks/reviews";
+
+@import "blocks/page-dots";

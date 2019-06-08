@@ -1,11 +1,25 @@
 .comment {
   display: flex;
+  min-width: 100%;
+  opacity: 0;
+  transition: opacity .3s;
+  &.active {
+    opacity: 1;
+  }
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .comment__photo {
   flex-shrink: 0;
   margin-right: 20px;
   width: 35%;
+  @include tablets {
+    width: 50%;
+  }
 }
 
 .comment__pic {

@@ -7,6 +7,9 @@
     top: 0;
     right: 0;
     background: url(../images/comments-up.png) center center / contain no-repeat;
+    @include phones {
+      width: rem(150px);
+    }
   }
   &:after {
     content: '';
@@ -16,6 +19,10 @@
     bottom: rem(-100px);
     left: 0;
     background: url(../images/comments-down.png) center center / contain no-repeat;
+    @include phones {
+      width: rem(80px);
+      height: rem(200px);
+    }
   }
 }
 
@@ -25,6 +32,17 @@
   padding: rem(51px) rem(180px) rem(40px) rem(45px);
   position: relative;
   margin-bottom: rem(50px);
+  overflow: hidden;
+  display: flex;
+  @include tablets {
+    width: 60%;
+    margin: 0 auto;
+    padding: rem(66px) rem(30px) rem(38px);
+    margin-bottom: rem(40px);
+  }
+  @include phones {
+    width: 100%;
+  }
   &:before {
     content: '';
     width: rem(90px);
@@ -50,6 +68,7 @@
 .comments__avatars {
   display: flex;
   justify-content: center;
+  z-index: 3;
 }
 
 .comments__avatar {

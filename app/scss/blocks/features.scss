@@ -1,13 +1,19 @@
-
-
 .features__list {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  text-align-last: left;
 }
 
 .features__item {
   display: flex;
+  @include tablets {
+    width: 21%;
+  }
+  @include phones {
+    width: 27%;
+    text-align: left;
+  }
 }
 
 .features__pic {
@@ -17,10 +23,15 @@
   width: rem(65px);
   height: rem(45px);
   margin-right: rem(10px);
+  flex-shrink: 0;
+  @include phones {
+    width: rem(55px);
+  }
 }
 
 .features__img {
   max-width: 100%;
+  max-height: 100%;
   stroke: $light-blue;
   fill:$blue;
 }

@@ -1,19 +1,46 @@
 .header {
-    
+    width: 100%;
     display: flex;
     padding-top: rem(24px);
     justify-content: space-between;
     align-items: center;
+    @include phones {
+        padding-top: rem(15px);
+    }
 }
 
 .header__nav {
     width: 70%;
+    &.active {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+        z-index: 4;
+        justify-content: center;
+        align-items: center;
+        background-color: #0d0d0df5;
+        .header-menu {
+            flex-direction: column;
+            height: 54%;
+            text-align: center;
+            font-size: rem(36px);
+        }
+    }
+    @include tablets {
+        display: none;
+    }
 }
 
 .header__phone {
     display: flex;
     align-items: center;
-
+    
+    @include tablets {
+        display: none;
+    }
 }
 
 .header__phone-logo {
