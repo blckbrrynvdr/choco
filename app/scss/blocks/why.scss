@@ -1,0 +1,53 @@
+.why {
+  text-align: center;
+  &:before {
+    content: '';
+    position: absolute;
+    width: rem(190px);
+    height: rem(314px);
+    background: url(../images/why_bg_1.png) center center / cover no-repeat;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    width: rem(190px);
+    height: rem(314px);
+    background: url(../images/why-bg-2.png) left center / contain no-repeat ;
+    bottom: rem(-100px);
+    z-index: 2;
+    @include phones {
+      height: rem(230px);
+    }
+  }
+}
+
+.why__title {
+  margin-bottom: rem(23px);
+  @include phones {
+    margin-bottom: rem(5px);
+  }
+}
+
+.why__desc {
+  padding: 0px 27%;
+  color: $gray;
+  font-family: $regular;
+  margin-bottom: rem(57px);
+  @include phones {
+    padding: 0;
+    margin-bottom: rem(15px);
+  }
+}
+
+
+
+.why__list {
+  display: flex;
+  justify-content: space-between;
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
+}

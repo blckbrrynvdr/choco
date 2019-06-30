@@ -1,0 +1,25 @@
+$blue:#61c4d9;
+$light-blue: #b0f7ff;
+$dark-green: #0f5a47;
+$light-gray:#f2f5f4;
+$backround-gray:#f8faf9;
+$gray:#666666;
+$black: #0d0d0d;
+
+$regular: 'Alegreya-Reg', 'Arial', sans-serif;
+$bold: 'Alegreya-Bold', 'Arial', sans-serif;
+$extrabold: 'Alegreya-ExtraBold', 'Arial', sans-serif;
+$light: 'Alegreya-Light', 'Arial', sans-serif;
+$medium:'Alegreya-Med', 'Arial', sans-serif;
+
+
+
+@function rem($px){
+	@return $px / 16px + 0rem;
+}
+
+
+
+$tablets: 768px;
+$phones: 480px;
+$phones-small: 370px;

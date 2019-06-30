@@ -1,0 +1,49 @@
+.comment {
+  display: flex;
+  min-width: 100%;
+  opacity: 0;
+  transition: opacity .3s;
+  &.active {
+    opacity: 1;
+  }
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.comment__photo {
+  flex-shrink: 0;
+  margin-right: 20px;
+  width: 35%;
+  @include tablets {
+    width: 50%;
+  }
+}
+
+.comment__pic {
+  max-width: 100%;
+  display: block;
+}
+
+.comment__desc {
+  padding-top: rem(10px);
+}
+
+.comment__title {
+  font-size: rem(30px);
+  font-family: $medium;
+  margin-bottom: rem(30px);
+}
+
+.comment__text {
+  font-family: $regular;
+  color: $gray;
+  margin-bottom: rem(30px);
+}
+
+.comment__author {
+  font-family: $medium;
+  color: $gray;
+}

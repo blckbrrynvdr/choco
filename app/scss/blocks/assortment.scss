@@ -1,0 +1,157 @@
+.assortment {
+  background-color: $light-gray;
+}
+
+.assortment__slider {
+  overflow: hidden;
+}
+
+.assortment__list {
+  display: flex;
+  position: relative;
+  will-change: right;
+  transition: right 0.3s;
+}
+
+.assortment__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100%;
+  @include tablets {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+.assortment__photo {
+  flex-shrink: 0;
+  width: 42%;
+  @include tablets {
+    margin-bottom: rem(40px);
+    width: 47%;
+  }
+  @include phones {
+    width: 70%;
+  }
+}
+
+.assortment__pic {
+  max-width: 100%;
+  display: block;
+}
+
+.assortment__content {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  @include tablets {
+    width: 50%;
+  }
+  @include phones {
+    width: 90%;
+  }
+}
+
+.assortment__title {
+  font-family: $bold;
+  font-size: rem(36px);
+  text-transform: uppercase;
+  
+}
+
+.assortment__composition {
+  font-family: $medium;
+  font-size: rem(24px);
+  margin-bottom: rem(33px);
+}
+
+.assortment__text {
+  margin-bottom: rem(50px);
+  width: 90%;
+  color: $gray;
+  @include tablets {
+    width: 100%;
+  }
+}
+
+
+.assortment__value {
+  display: flex;
+  margin-bottom: rem(52px);
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.assortment__calorific {
+  margin-right: rem(50px);
+}
+
+.assortment__calorific-title,.assortment__weight-title {
+  margin-bottom: rem(9px);
+}
+
+.assortment__calorific-value,.assortment__weight-value {
+  font-family: $bold;
+}
+
+.assortment__order {
+  display: flex;
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.assortment__price {
+  font-family: $light;
+  font-size: rem(60px);
+  margin-right: rem(31px);
+  span {
+    font-size: rem(34px);
+  }
+}
+
+.assortment__control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: rem(40px);
+  width: rem(30px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  @include tablets {
+    top: 33%;
+  }
+  svg {
+    max-width: 100%;
+  }
+  &--left {
+    left: -4%;
+    @include tablets {
+      left: 13%;
+    }
+    @include phones {
+      left: 0;
+    }
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+  &--right {
+    right: -4%;
+    @include tablets {
+      right: 13%;
+    }
+    @include phones {
+      right: 0;
+    }
+    svg {
+      transform: rotate(-90deg);
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.team__list {
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  min-height: rem(480px);
+  @include tablets {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: rem(-16px);
+  }
+  @include phones {
+    
+  min-height: rem(640px);
+  }
+}
+
+.team__card {
+  width: 24%;
+  text-align: center;
+  &:nth-child(even) {
+    padding-top:30px;
+  }
+  @include tablets {
+    width: 34%;
+    text-align: center;
+    margin-left: 16px;
+    &:nth-child(even) {
+      padding-top:0;
+    }
+  }
+  @include phones {
+    width: 44%;
+  }
+  &.active {
+    .team__name:after {
+      transform: rotate(180deg);
+    }
+    .team__desc {
+      height: 100%;
+    }
+  }
+}
+
+.team__photo {
+  margin-bottom: rem(25px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team__pic {
+  max-width: 100%;
+  display: block;
+}
+
+.team__name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: $medium;
+  font-size: rem(21px);
+  margin-bottom: rem(12px);
+  color: inherit;
+  &:after {
+    content: '';
+    width: 9px;
+    height: 7px;
+    margin-left: 5px;
+    transform: rotate(0deg);
+    transition: transform .3s ease-out;
+    background: url(../images/team/polygon.png) center center / contain no-repeat;
+  }
+}
+
+.team__desc {
+  height: 0;
+  overflow: hidden;
+  transition: height .3s;
+}
+
+.team__position {
+  font-family: $regular;
+  margin-bottom: 6px;
+}
+
+.team__text {
+  font-family: $light;
+  color: $gray;
+  line-height: normal;
+}
