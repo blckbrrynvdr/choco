@@ -1,5 +1,6 @@
 $blue:#61c4d9;
 $light-blue: #b0f7ff;
+$intence-blue: #60aacc;
 $dark-green: #0f5a47;
 $light-gray:#f2f5f4;
 $backround-gray:#f8faf9;
@@ -12,10 +13,10 @@ $extrabold: 'Alegreya-ExtraBold', 'Arial', sans-serif;
 $light: 'Alegreya-Light', 'Arial', sans-serif;
 $medium:'Alegreya-Med', 'Arial', sans-serif;
 
-
+$gfz: 18px;
 
 @function rem($px){
-	@return $px / 16px + 0rem;
+	@return $px / $gfz + 0rem;
 }
 
 

@@ -3,15 +3,17 @@
 }
 
 
+
+
 html{
-	font-size: 16px;
+	font-size: $gfz;
 	
 	width: 100%;
 	@include tablets {
-		font-size: rem(14px);
+		font-size: $gfz - 1px;
 	}
 	@include phones {
-		font-size: rem(13px);
+		font-size: $gfz - 2px;
 	}
 	@include phones-small {
 		font-size: rem(11px);
@@ -61,12 +63,12 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-	font-size: rem(60px);
+	font-size: rem(48px);
 	font-family: $bold;
 	line-height: 1;
 	text-transform: uppercase;
 	@include phones {
-		font-size: rem(42px);
+		font-size: rem(40px);
 	}
 }
 

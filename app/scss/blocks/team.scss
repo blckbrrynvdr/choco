@@ -17,9 +17,6 @@
 .team__card {
   width: 24%;
   text-align: center;
-  &:nth-child(even) {
-    padding-top:30px;
-  }
   @include tablets {
     width: 34%;
     text-align: center;

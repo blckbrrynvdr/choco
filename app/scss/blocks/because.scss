@@ -30,9 +30,10 @@
   padding: rem(27px);
   position: relative;
   margin-bottom: rem(35px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexCenter;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
   @include tablets {
     margin-bottom: rem(20px);
   }

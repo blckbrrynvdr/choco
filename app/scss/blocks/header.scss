@@ -43,10 +43,11 @@
     }
 }
 
-.header__phone-logo {
+.header__phone-logo, .header__phone-pic {
     width: 12px;
     height: 12px;
     margin-right: 6px;
+    fill: #ffffff;
 }
 
 .header__phone-number {
