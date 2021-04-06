@@ -1,7 +1,8 @@
-@import "fonts";
+@import "template/fonts";
 
 @import "template/normalize";
 @import "template/variables";
+// @import "template/mixins";
 @import "template/adaptive";
 @import "template/animate";
 @import "template/base";
@@ -30,3 +31,5 @@
 
 
 @import "blocks/page-dots";
+
+@import "blocks/empxrem.scss"

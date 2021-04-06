@@ -40,12 +40,14 @@
   font-size: rem(21px);
   width: 75%;
   margin-bottom: rem(32px);
+  max-width: 371px;
   @include tablets {
     width: 100%;
-    padding: 0 25%;
+    margin: 0 auto rem(32px) auto;
+    // padding: 0 25%;
   }
   @include phones {
-    padding: 0 6%;
+    // padding: 0 6%;
     margin-bottom: rem(20px);
   }
 }
@@ -66,15 +68,15 @@
     top: rem(-20px);
     right: 0;
     width: 100%;
-    &:after {
-      content: '';
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: -20px;
-      left: 0;
-      background: url(../images/choco-mobile.png) center bottom / 75% no-repeat;
-    }
+    // &:after {
+    //   content: '';
+    //   width: 100%;
+    //   height: 100%;
+    //   position: absolute;
+    //   top: -20px;
+    //   left: 0;
+    //   background: url(../images/choco-mobile.png) center bottom / 75% no-repeat;
+    // }
   }
   @include phones {
     height: 45%;
@@ -99,3 +101,4 @@
   bottom: rem(-98px);
   
 }
+

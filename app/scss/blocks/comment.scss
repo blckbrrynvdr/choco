@@ -17,6 +17,7 @@
   flex-shrink: 0;
   margin-right: 20px;
   width: 35%;
+  z-index: 5;
   @include tablets {
     width: 50%;
   }

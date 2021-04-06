@@ -24,3 +24,10 @@ $gfz: 18px;
 $tablets: 768px;
 $phones: 480px;
 $phones-small: 370px;
+
+
+@mixin flexCenter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

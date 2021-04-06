@@ -25,7 +25,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('styles', function() {
-	return gulp.src('app/scss/*.scss')
+	return gulp.src('app/scss/main.scss')
 	.pipe(wait(1500))
 	.pipe(sourcemaps.init({loadMaps: true}))
 		.pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))

@@ -1,0 +1,63 @@
+// html font-size 16px
+
+
+// как работает em
+// .em {
+//     font-size: 14px;
+// }
+// h1 {
+//     font-size: 2em; /* 1em = 16px */
+//     margin-bottom: 1em; /* 1em = 32px */
+// }
+// p {
+//     font-size: 1em; /* 1em = 16px */
+//     margin-bottom: 1em; /* 1em = 16px */
+// }
+
+
+
+
+// как работает rem
+// .em {
+//     font-size: 40px;
+// }
+// h1 {
+//     font-size: 2rem;
+//     margin-bottom: 1rem; /* 1rem = 18px */
+// }
+// p {
+//     font-size: 1rem;
+//     margin-bottom: 1rem; /* 1rem = 18px */
+// }
+
+
+// заголовок, только rem
+// .header {
+//     font-size: 1rem;
+//     padding: 0.5rem 0.75rem;
+//     background: #7F7CFF;
+// }
+  
+// .header--large {
+//     font-size: 2rem;
+// }
+
+// p {
+//     padding: 0.5rem 0.75rem;
+// }
+
+
+// заголовок, только rem
+// .header {
+//     font-size: 1em;
+//     padding: 0.5rem 0.75rem;
+//     background: #7F7CFF;
+// }
+// .header--large {
+//     font-size: 2em;
+//     // padding-left: 0.375em;
+//     // padding-right: 0.375em;
+// }
+// p {
+//     margin: 0 0.75rem;
+// }

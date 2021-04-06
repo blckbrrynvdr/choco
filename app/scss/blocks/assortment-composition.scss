@@ -6,6 +6,9 @@
             left: 100%;
         }
     }
+    @include tablets {
+        display: none;
+    }
 }
 
 .assortment-composition__button {

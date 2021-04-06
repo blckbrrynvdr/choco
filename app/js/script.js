@@ -293,85 +293,85 @@ sendFormButton.addEventListener('click', function (e) {
 
 /**OPS */
 
-const sections = $('.section');
-const display = $('.maincontent');
-let inscroll = false;
+// const sections = $('.section');
+// const display = $('.maincontent');
+// let inscroll = false;
 
-const switchActiveClassSideMenu = menuItemIndex => {
-  $('.page-dots__item')
-    .eq(menuItemIndex)
-    .addClass('active')
-    .siblings()
-    .removeClass('active');
-}
+// const switchActiveClassSideMenu = menuItemIndex => {
+//   $('.page-dots__item')
+//     .eq(menuItemIndex)
+//     .addClass('active')
+//     .siblings()
+//     .removeClass('active');
+// }
 
-const performTransition = sectionEq => {
-  if (inscroll) return;
+// const performTransition = sectionEq => {
+//   if (inscroll) return;
   
-  inscroll = true;
+//   inscroll = true;
   
-  const position = `${sectionEq * -100}%`;
+//   const position = `${sectionEq * -100}%`;
   
-  sections
-  .eq(sectionEq)
-  .addClass("active")
-  .siblings()
-  .removeClass("active");
+//   sections
+//   .eq(sectionEq)
+//   .addClass("active")
+//   .siblings()
+//   .removeClass("active");
   
-  display.css({
-    transform: `translateY(${position})`
-  });
+//   display.css({
+//     transform: `translateY(${position})`
+//   });
   
-  setTimeout(() => {
-    switchActiveClassSideMenu(sectionEq);
-    inscroll = false;
-  }, 1000 + 300); //время transition + время за которое успокоется инерция
-};
+//   setTimeout(() => {
+//     switchActiveClassSideMenu(sectionEq);
+//     inscroll = false;
+//   }, 1000 + 300); //время transition + время за которое успокоется инерция
+// };
 
-const scrollToSection = direction => {
-  const activeSection = sections.filter(".active");
-  const nextSection = activeSection.next();
-  const prevSection = activeSection.prev();
+// const scrollToSection = direction => {
+//   const activeSection = sections.filter(".active");
+//   const nextSection = activeSection.next();
+//   const prevSection = activeSection.prev();
   
-  if (direction === "next" && nextSection.length) {
-    performTransition(nextSection.index());
-  }
+//   if (direction === "next" && nextSection.length) {
+//     performTransition(nextSection.index());
+//   }
   
-  if (direction === "prev" && prevSection.length) {
-    performTransition(prevSection.index());
-  }
-};
+//   if (direction === "prev" && prevSection.length) {
+//     performTransition(prevSection.index());
+//   }
+// };
 
-$('.wrapper').on('wheel', e => {
-  const deltaY = e.originalEvent.deltaY;
+// $('.wrapper').on('wheel', e => {
+//   const deltaY = e.originalEvent.deltaY;
   
-  if(deltaY > 0) {
-    scrollToSection("next");
-  }
+//   if(deltaY > 0) {
+//     scrollToSection("next");
+//   }
   
-  if(deltaY < 0) {
-    scrollToSection("prev");
-  }
-})
+//   if(deltaY < 0) {
+//     scrollToSection("prev");
+//   }
+// })
 
-$(document).on("keydown", e => {
-  switch(e.keyCode) {
-    case 38:
-    scrollToSection('prev');
-    break;
-    case 40:
-    scrollToSection('next');
-    break;
-  }
-})
+// $(document).on("keydown", e => {
+//   switch(e.keyCode) {
+//     case 38:
+//     scrollToSection('prev');
+//     break;
+//     case 40:
+//     scrollToSection('next');
+//     break;
+//   }
+// })
 
-$("[data-scroll-to]").on('click', e => {
-  e.preventDefault();
+// $("[data-scroll-to]").on('click', e => {
+//   e.preventDefault();
 
-  const target = $(e.currentTarget).attr('data-scroll-to');
+//   const target = $(e.currentTarget).attr('data-scroll-to');
 
-  performTransition(target);
-});
+//   performTransition(target);
+// });
 
 // $(window).swipe({
 //   swipe:function(event, direction, distance, duration, fingerCount, fingerData) {

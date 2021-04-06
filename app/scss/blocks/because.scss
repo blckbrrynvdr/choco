@@ -4,20 +4,25 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+
   &:last-child {
     .because__logo::after {
       display: none;
     }
+
     @include tablets {
       margin-bottom: 0;
     }
   }
+
   @include tablets {
     width: 40%;
     margin-bottom: rem(35px);
   }
+
   @include phones {
-    width: 80%;
+    flex-direction: row;
+    width: 100%;
     margin-bottom: rem(15px);
   }
 }
@@ -30,16 +35,21 @@
   padding: rem(27px);
   position: relative;
   margin-bottom: rem(35px);
+  flex-shrink: 0;
   @include flexCenter;
+
   // display: flex;
   // align-items: center;
   // justify-content: center;
   @include tablets {
     margin-bottom: rem(20px);
   }
+
   @include phones {
-    margin-bottom: rem(8px);
+    margin-right: rem(12px);
+
   }
+
   &:after {
     content: '';
     width: rem(67px);
@@ -49,6 +59,7 @@
     right: -110%;
     top: 50%;
     transform: translateY(-50%);
+
     @include tablets {
       display: none;
     }
@@ -61,13 +72,21 @@
   fill: $light-gray;
 }
 
+.because__text {
+  @include phones {
+    text-align: left;
+  }
+}
+
 .because__title {
   font-size: rem(27px);
   margin-bottom: rem(30px);
   font-family: $bold;
+
   @include tablets {
     margin-bottom: rem(20px);
   }
+
   @include phones {
     margin-bottom: rem(5px);
   }
@@ -76,6 +95,7 @@
 .because__desc {
   font-family: $light;
   color: $gray;
+
   @include phones {
     width: 90%;
   }
