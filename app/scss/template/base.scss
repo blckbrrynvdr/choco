@@ -13,10 +13,7 @@ html{
 		font-size: $gfz - 1px;
 	}
 	@include phones {
-		font-size: $gfz - 2px;
-	}
-	@include phones-small {
-		font-size: rem(11px);
+		font-size: 2vmax;
 	}
 	height: 100%;
 }
@@ -161,6 +158,15 @@ img {
 	font-family: $extrabold;
 	cursor:pointer;
 	&.white-btn {
+		line-height: rem(58px);
+		padding: 0 rem(35px);
+		text-transform: uppercase;
+		color: #000000;
+		font-size: rem(19px);
+		background-color: #FEDB3F;
+		border-radius: rem(32px);
+	}
+	&.common-btn {
 		line-height: rem(58px);
 		padding: 0 rem(35px);
 		text-transform: uppercase;
