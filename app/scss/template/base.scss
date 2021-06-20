@@ -140,17 +140,6 @@ img {
 			
 			align-items: center;
 		}
-		&::after {
-			content: '';
-			width: 100%;
-			height: rem(353px);
-			position: absolute;
-			bottom: rem(-130px);
-			background: url(../images/main-down-bg.png) center center / contain no-repeat;
-			@include tablets {
-				display: none;
-			}
-		}
 		
 	}
 	&--footer {
@@ -175,9 +164,9 @@ img {
 		line-height: rem(58px);
 		padding: 0 rem(35px);
 		text-transform: uppercase;
-		color: $dark-green;
+		color: #000000;
 		font-size: rem(19px);
-		background-color: #fff;
+		background-color: #FEDB3F;
 		border-radius: rem(32px);
 	}
 	&.green-btn {
@@ -192,7 +181,7 @@ img {
 	&.transparent-btn {
 		line-height: rem(58px);
 		padding: 0 rem(35px);
-		color: $dark-green;
+		color: #fff;
 		font-size: rem(19px);
 		background-color: transparent;
 		border-radius: 32px;

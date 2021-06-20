@@ -1,11 +1,12 @@
 .main__section {
-  background: url(../images/main-bg.png) right bottom / contain no-repeat ;
-  background-color: $blue;
+  background: url(../images/surfboard/bg.png) center center / cover no-repeat ;
+  background-color: #1968B1;
   color: #fff;
   position: relative;
   padding-bottom: rem(46px);
   @include tablets {
-    background: url(../images/main-bg.png) right top / 75% no-repeat $blue;
+    background-position: right 17% bottom;
+    background-size: auto calc(100% - 91px);
   }
 }
 

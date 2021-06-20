@@ -1,29 +1,5 @@
 .comments {
-  &:before {
-    content: '';
-    width: rem(173px);
-    height: rem(99px);
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: url(../images/comments-up.png) center center / contain no-repeat;
-    @include phones {
-      width: rem(150px);
-    }
-  }
-  &:after {
-    content: '';
-    width: rem(158px);
-    height: rem(422px);
-    position: absolute;
-    bottom: rem(-100px);
-    left: 0;
-    background: url(../images/comments-down.png) center center / contain no-repeat;
-    @include phones {
-      width: rem(80px);
-      height: rem(200px);
-    }
-  }
+  
 }
 
 .comments__content {

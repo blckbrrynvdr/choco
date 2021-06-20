@@ -23,8 +23,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: rem(65px);
-  height: rem(45px);
+  width: rem(35px);
+  height: rem(35px);
   margin-right: rem(10px);
   flex-shrink: 0;
   @include phones {
@@ -35,6 +35,5 @@
 .features__img {
   max-width: 100%;
   max-height: 100%;
-  stroke: $light-blue;
-  fill:$blue;
+  fill:#ffffff;
 }

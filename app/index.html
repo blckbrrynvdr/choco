@@ -16,14 +16,16 @@
 			<section class="section main__section active">
 				<div class="container container--justify container--main">
 					<header class="header">
-						<div class="header__logo"><img src="images/logo.png" alt="logo"></div>
+						<svg class="header__logo">
+							<use xlink:href="images/icons/sprite.svg#logo"></use>
+						</svg>
 						<nav class="header__nav animated fadeIn" id="hamburgerMenu">
 							<ul class="header-menu">
 								<li class="header-menu__item">
 									<a href="#" class="header-menu__link" data-scroll-to="1">О нас</a>
 								</li>
 								<li class="header-menu__item">
-									<a href="#" class="header-menu__link" data-scroll-to="2">Батончики</a>
+									<a href="#" class="header-menu__link" data-scroll-to="2">Серфборды</a>
 								</li>
 								<li class="header-menu__item">
 									<a href="#" class="header-menu__link" data-scroll-to="3">Команда</a>
@@ -58,25 +60,15 @@
 						</div>
 					</header>
 
-					<div class="main__pictures">
-						<picture>
-							<source srcset="images/choco/mobile.webp" media="(max-width: 480px)" alt="<=480">
-							<source srcset="images/choco/tablet.webp"
-								media="(max-width: 768px)" alt="<=768">
-							<source srcset="images/choco/desk.webp"
-								media="(min-width: 769px)" alt=">=768">
-							<img srcset="images/choco/desk.webp" src="images/choco/desk.png"
-								alt="tag img" class="main__cover">
-						</picture>
-					</div>
+
 
 					<div class="main__content-wrapper">
 						<div class="main__content">
 							<div class="main__title">
-								<h1>натуральные шоколадные батончики</h1>
+								<h1>Профессиональные доски для
+									серфинга</h1>
 							</div>
-							<div class="main__desc">Наши батончики идеально подходят для тех, кто следит за своим
-								здоровьем</div>
+							<div class="main__desc">Самый большой выбор серфбордов в мире</div>
 							<div class="main__button"><button class="btn white-btn" data-scroll-to="7">заказать</button>
 							</div>
 						</div>
@@ -85,26 +77,26 @@
 								<li class="features__item">
 									<div class="features__pic">
 										<svg class="features__img">
-											<use xlink:href="images/icons/sprite.svg#sheet" />
+											<use xlink:href="images/icons/sprite.svg#board" />
 										</svg>
 									</div>
-									100% натуральный продукт
+									Уникальный дизайн
 								</li>
 								<li class="features__item">
 									<div class="features__pic">
 										<svg class="features__img">
-											<use xlink:href="images/icons/sprite.svg#van" />
+											<use xlink:href="images/icons/sprite.svg#saw" />
 										</svg>
 									</div>
-									3-5 дней доставка по РФ
+									Прочные материалы
 								</li>
 								<li class="features__item">
 									<div class="features__pic">
 										<svg class="features__img">
-											<use xlink:href="images/icons/sprite.svg#cm" />
+											<use xlink:href="images/icons/sprite.svg#deliv" />
 										</svg>
 									</div>
-									Не портит фигуру
+									Быстрая доставка
 								</li>
 							</ul>
 						</div>
@@ -116,41 +108,41 @@
 
 			<section class="section why">
 				<div class="container container--center">
-					<h2 class="why__title">Почему chocco?</h2>
-					<div class="why__desc">В нашем мире все происходит очень быстро, поэтому мы
-						делаем батончики, которые удобно взять с собой.</div>
+					<h2 class="why__title">почему Surfboard?</h2>
+					<div class="why__desc">Мы создаем уникальные и качественные доски из прочных и экологичных материалов.</div>
 
 					<ul class="why__list">
 						<li class="why__item because">
 							<div class="because__logo">
 								<svg class="because__picture">
-									<use xlink:href="images/icons/sprite.svg#happy" /></svg>
+									<use xlink:href="images/icons/sprite.svg#line" />
+								</svg>
 							</div>
 							<div class="because__text">
-								<div class="because__title">Полезно</div>
-								<div class="because__desc">Натуральность - ключевое качество нашей продукции. Мы
-									используем только природные ингредиенты.</div>
+								<div class="because__title">Perfect Fit</div>
+								<div class="because__desc">Мы создаем доски по индивидуальным замерам. Мы учитываем при создании ваш рост, вес и уровень подготовки.</div>
 							</div>
 						</li>
 						<li class="why__item because">
 							<div class="because__logo">
 								<svg class="because__picture">
-									<use xlink:href="images/icons/sprite.svg#lovely" /></svg>
+									<use xlink:href="images/icons/sprite.svg#ground"/>
+								</svg>
 							</div>
 							<div class="because__text">
-								<div class="because__title">Вкусно</div>
-								<div class="because__desc">Нежный, ненавязчивый, изысканный – так клиенты описывают
-									вкусовые качества наших батончиков.</div>
+								<div class="because__title">Strong</div>
+								<div class="because__desc">Мы используем только качественные и экологичные материалы. Ваша доска прослужит вам долгие годы.</div>
 							</div>
 						</li>
 						<li class="why__item because">
 							<div class="because__logo">
-								<img src="./images/icons/muscle.svg" alt="happy" class="because__picture">
+								<svg class="because__picture">
+									<use xlink:href="images/icons/sprite.svg#boards"/>
+								</svg>
 							</div>
 							<div class="because__text">
-								<div class="because__title">Полезно</div>
-								<div class="because__desc">Высокое содержание качественного белка, а также всех
-									необходимых витаминов и минералов.</div>
+								<div class="because__title">Unique</div>
+								<div class="because__desc">Вы станете обладателем уникального серфборда. Доска будет выполнена по вашему уникальному дизайну. </div>
 							</div>
 						</li>
 					</ul>
@@ -166,89 +158,80 @@
 					<div class="assortment__slider">
 						<ul class="assortment__list" id="slider">
 							<li class="assortment__item">
-								<div class="assortment__photo"><img src="./images/slider1.png" alt=""
+								<div class="assortment__photo"><img src="./images/surfboard/slider/surf1.png" alt=""
 										class="assortment__pic"></div>
 								<div class="assortment__content">
 									<div class="assortment__composition assortment-composition">
 										<div class="assortment-composition__button">
 											<div class="assortment-composition__button-pic">
 												<svg class="assortment-composition__button-icon">
-													<use xlink:href="images/icons/sprite.svg#chocolate-bar"></use>
+													<use xlink:href="images/icons/sprite.svg#params"></use>
 												</svg>
 											</div>
-											<div class="assortment-composition__title">Состав</div>
+											<div class="assortment-composition__title">параметры</div>
 										</div>
 										<ul class="assortment-composition__list">
 											<li class="assortment-composition__item">
 												<svg class="assortment-composition__icon">
 													<use xlink:href="images/icons/sprite.svg#grape"></use>
 												</svg>
-												<div class="assortment-composition__desc">Виноград</div>
-												<div class="assortment-composition__weight">25г</div>
+												<div class="assortment-composition__desc">Длина доски</div>
+												<div class="assortment-composition__weight">от 2,5 м</div>
 											</li>
 											<li class="assortment-composition__item">
 												<svg class="assortment-composition__icon">
 													<use xlink:href="images/icons/sprite.svg#grape"></use>
 												</svg>
-												<div class="assortment-composition__desc">Виноград</div>
-												<div class="assortment-composition__weight">25г</div>
+												<div class="assortment-composition__desc">Ширина доски</div>
+												<div class="assortment-composition__weight">от 40 см</div>
 											</li>
 											<li class="assortment-composition__item">
 												<svg class="assortment-composition__icon">
 													<use xlink:href="images/icons/sprite.svg#grape"></use>
 												</svg>
-												<div class="assortment-composition__desc">Виноград</div>
-												<div class="assortment-composition__weight">25г</div>
+												<div class="assortment-composition__desc">Толщина</div>
+												<div class="assortment-composition__weight">8 см</div>
 											</li>
 											<li class="assortment-composition__item">
 												<svg class="assortment-composition__icon">
 													<use xlink:href="images/icons/sprite.svg#grape"></use>
 												</svg>
-												<div class="assortment-composition__desc">Виноград</div>
-												<div class="assortment-composition__weight">25г</div>
+												<div class="assortment-composition__desc">Срок службы</div>
+												<div class="assortment-composition__weight">5 лет</div>
 											</li>
 											<li class="assortment-composition__item">
 												<svg class="assortment-composition__icon">
 													<use xlink:href="images/icons/sprite.svg#grape"></use>
 												</svg>
-												<div class="assortment-composition__desc">Виноград</div>
-												<div class="assortment-composition__weight">25г</div>
-											</li>
-											<li class="assortment-composition__item">
-												<svg class="assortment-composition__icon">
-													<use xlink:href="images/icons/sprite.svg#grape"></use>
-												</svg>
-												<div class="assortment-composition__desc">Виноград</div>
-												<div class="assortment-composition__weight">25г</div>
+												<div class="assortment-composition__desc">Вес</div>
+												<div class="assortment-composition__weight">7-8 кг</div>
 											</li>
 										</ul>
 									</div>
-									<div class="assortment__title">Батончик “Морские водоросли”</div>
+									<div class="assortment__title">Лонгборд 2.0</div>
 									<div class="assortment__desc">
-										<p class="assortment__text">Гранола из морских водорослей с овсом, миндалем и
-											тыквенными семечками. В состав также входят: сухое молоко, заменитель сахара
-											и какао бобы.</p>
+										<p class="assortment__text">Устойчивая доска для новичков. На них легко лежать, сидеть, грести, разгребаться на волны и ехать. Размер и плавучесть доски позволяет брать очень маленькие и пологие волны и не спеша, не прилагая особых усилий ехать по ним.										</p>
 										<div class="assortment__value">
 											<div class="assortment__calorific">
-												<div class="assortment__calorific-title">Калорийность</div>
-												<div class="assortment__calorific-value">120 ккал</div>
+												<div class="assortment__calorific-title">Длина доски</div>
+												<div class="assortment__calorific-value">от 2,5 метров</div>
 											</div>
 											<div class="assortment__weight">
-												<div class="assortment__weight-title">Вес</div>
-												<div class="assortment__weight-value">98 грамм</div>
+												<div class="assortment__weight-title">Ширина доски</div>
+												<div class="assortment__weight-value">от 40 сантиметров</div>
 											</div>
 										</div>
 										<div class="assortment__order">
-											<div class="assortment__price">140 <span>₽</span></div>
+											<div class="assortment__price">7000<span>₽</span></div>
 											<div class="assortment__button">
-												<button type="button" href="#" class="btn green-btn">Заказать</button>
+												<button type="button" href="#" class="btn white-btn">Заказать</button>
 											</div>
 										</div>
 									</div>
 								</div>
 							</li>
 							<li class="assortment__item">
-								<div class="assortment__photo"><img src="./images/slider2.png" alt=""
+								<div class="assortment__photo"><img src="./images/surfboard/slider/surf2.png" alt=""
 										class="assortment__pic"></div>
 								<div class="assortment__content">
 									<div class="assortment__composition assortment-composition">
@@ -600,7 +583,7 @@
 							</label>
 
 							<div class="form__content form__content--wide form__content--center">
-								<button type="submit" id="sendForm" class="form__submit btn green-btn">Заказать</button>
+								<button type="submit" id="sendForm" class="form__submit btn white-btn">Заказать</button>
 								<button type="reset" class="form__reset btn transparent-btn">Очистить</button>
 							</div>
 						</div>
@@ -642,7 +625,7 @@
 								<li class="social__icon">
 									<a href="#" class="social__link">
 										<svg class="social__pic">
-											<use xlink:href="./images/icons/sprite.svg#tweet"></use>
+											<use xlink:href="./images/icons/sprite.svg#twitter"></use>
 										</svg>
 									</a>
 								</li>
