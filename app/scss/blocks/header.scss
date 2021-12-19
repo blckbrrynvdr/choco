@@ -14,7 +14,7 @@
     &.active {
         position: fixed;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         left: 0;
         top: 0;
         display: flex;
@@ -37,13 +37,13 @@
 .header__phone {
     display: flex;
     align-items: center;
-    
     @include tablets {
         display: none;
     }
 }
 
-.header__phone-logo, .header__phone-pic {
+.header__phone-logo,
+.header__phone-pic {
     width: 12px;
     height: 12px;
     margin-right: 6px;
@@ -54,4 +54,3 @@
     color: inherit;
     font-size: rem(24px);
 }
-
