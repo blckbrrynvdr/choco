@@ -1,0 +1,41 @@
+<section class="section video">
+    <div class="container video__container">
+        <h2>Как мы работаем</h2>
+        <div class="video__wrapper">
+            <div class="video__player">
+                <video src="./src/video.mp4" id="player" poster="./images/video-bg.png">
+                    <source src="./src/video.mp4" type="video/mp4">
+                </video>
+                <button class="video__player-img">
+                    <img src="./images/icons/play.svg" alt="" class="play video__btn-img">
+                </button>
+            </div>
+            <div class="video__toolbar">
+                <div class="duration">
+                    <div class="duration__btn-wrap">
+                        <button class="play duration__img"></button>
+                    </div>
+                    <div class="duration__length-wrap">
+
+                        <!-- ползунок дивом -->
+                        <!-- <div class="div-duration" id="durationControl">
+                            <div class="div-duration__line" id="playbackLine">
+                                <button class="div-duration__thumb"></button>
+                            </div>
+                        </div> -->
+
+                        <input type="range" class="duration__length" id="durationLevel">
+                    </div>
+                </div>
+                <div class="sound">
+                    <button class="sound__btn">
+                        <img src="./images/icons/volume.svg" class="sound__mic" id="mic" alt="">
+                    </button>
+                    <div class="sound__volume">
+                        <input type="range" class="duration__length duration__length--other" id="micLevel">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
