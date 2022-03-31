@@ -3,6 +3,10 @@
   min-width: 100%;
   opacity: 0;
   transition: opacity .3s;
+  position: absolute;
+  &:nth-child(1) {
+    position: relative;
+  }
   &.active {
     opacity: 1;
   }

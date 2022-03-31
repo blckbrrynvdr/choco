@@ -13,7 +13,7 @@
 <body>
 	<div class="wrapper">
 		<div class="maincontent">
-			<section class="section main__section active">
+			<!-- <section class="section main__section active">
 				<div class="container container--justify container--main">
 					<header class="header">
 						<div class="header__logo"><img src="images/logo.png" alt="logo"></div>
@@ -46,9 +46,9 @@
 							<div class="header__phone-logo">
 								<svg class="header__phone-pic">
 									<use xlink:href="images/icons/sprite.svg#phone"></use>
-								</svg>
+								</svg>-->
 								<!-- <img src="images/icons/phone.png" alt="phone pic" class="header__phone-pic"> -->
-							</div>
+							<!--</div>
 							<a href="tel:88009039090" class="header__phone-number">8 800 903 90 90</a>
 						</div>
 						<div class="header__hamburger-button hamburger hamburger--squeeze" id="hamburgerButton">
@@ -112,9 +112,9 @@
 
 
 				</div>
-			</section>
+			</section> -->
 
-			<section class="section why">
+			<!-- <section class="section why">
 				<div class="container container--center">
 					<h2 class="why__title">Почему chocco?</h2>
 					<div class="why__desc">В нашем мире все происходит очень быстро, поэтому мы
@@ -155,9 +155,9 @@
 						</li>
 					</ul>
 				</div>
-			</section>
+			</section> -->
 
-			<section class="section assortment">
+			<!-- <section class="section assortment">
 				<div class="container container--center">
 					<a href="#" class="assortment__control assortment__control--left">
 						<svg>
@@ -337,8 +337,8 @@
 							<use xlink:href="images/icons/sprite.svg#arrow" /></svg></svg>
 					</a>
 				</div>
-			</section>
-
+			</section> -->
+<!-- 
 			<section class="section team">
 				<div class="container container--center">
 					<h2>команда</h2>
@@ -398,12 +398,12 @@
 						</li>
 					</ul>
 				</div>
-			</section>
+			</section> -->
 
 			<section class="section menu">
 				<h2 class="menu__title main-title__white">Меню</h2>
-				<ul class="menu__acco">
-					<li class="menu__item active">
+				<ul class="menu__acco" id="horizontalMenu">
+					<li class="menu__item">
 						<a href="#" class="menu__button" style="background-image: url(../images/milk.png)">
 							<div class="menu__button-text">
 								Батончики с молоком
@@ -454,12 +454,12 @@
 			<section class="section comments">
 				<div class="container  container--center">
 					<h2>отзывы</h2>
-					<ul class="comments__content">
-						<li class="comments__main comment active">
+					<ul class="comments__content" id="coments">
+						<li class="comments__main comment active" data-item="1">
 							<div class="comment__photo"><img src="../images/comment1.jpg" alt="" class="comment__pic">
 							</div>
 							<div class="comment__desc">
-								<div class="comment__title">Лучший перекус</div>
+								<div class="comment__title">Лучший перекус1</div>
 								<div class="comment__text">Я ем малыми порциями, но часто. Это повышает мою
 									продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или
 									на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это
@@ -468,11 +468,11 @@
 								<div class="comment__author">Алёна Хмельницкая</div>
 							</div>
 						</li>
-						<li class="comments__main comment">
+						<li class="comments__main comment" data-item="2">
 							<div class="comment__photo"><img src="../images/comment2.jpg" alt="" class="comment__pic">
 							</div>
 							<div class="comment__desc">
-								<div class="comment__title">Лучший перекус</div>
+								<div class="comment__title">Лучший перекус2</div>
 								<div class="comment__text">Я ем малыми порциями, но часто. Это повышает мою
 									продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или
 									на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это
@@ -481,11 +481,11 @@
 								<div class="comment__author">Алёна Хмельницкая</div>
 							</div>
 						</li>
-						<li class="comments__main comment">
+						<li class="comments__main comment" data-item="3">
 							<div class="comment__photo"><img src="../images/comment3.jpg" alt="" class="comment__pic">
 							</div>
 							<div class="comment__desc">
-								<div class="comment__title">Лучший перекус</div>
+								<div class="comment__title">Лучший перекус3</div>
 								<div class="comment__text">Я ем малыми порциями, но часто. Это повышает мою
 									продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или
 									на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это
@@ -495,15 +495,21 @@
 							</div>
 						</li>
 					</ul>
-					<ul class="comments__avatars">
+					<ul class="comments__avatars" id="commentAvatars">
 						<li class="comments__avatar active">
-							<img src="../images/comment1.jpg" alt="">
+              <a href="#" data-open="1" class="comments__link">
+                <img src="../images/comment1.jpg" class="comments__image" alt="">
+              </a>
 						</li>
 						<li class="comments__avatar">
-							<img src="../images/comment2.jpg" alt="">
+              <a href="#" data-open="2" class="comments__link">
+                <img src="../images/comment2.jpg" class="comments__image" alt="">
+              </a>
 						</li>
 						<li class="comments__avatar">
-							<img src="../images/comment3.jpg" alt="">
+              <a href="#" data-open="3" class="comments__link">
+                <img src="../images/comment3.jpg" class="comments__image" alt="">
+              </a>
 						</li>
 					</ul>
 				</div>
@@ -670,6 +676,8 @@
 <script src="./libs/jquery-3.3.1.min.js"></script>
 <script src="./libs/mobile-detect.min.js"></script>
 <script src="./libs/jquery.touchSwipe.min.js"></script>
+<script src="js/comments.js"></script>
+<script src="js/horizontal-acco.js"></script>
 
 <script type="template" id="overlayTemplate">
 	<div class="overlay">

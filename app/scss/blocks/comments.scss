@@ -35,7 +35,7 @@
   overflow: hidden;
   display: flex;
   @include tablets {
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
     padding: rem(66px) rem(30px) rem(38px);
     margin-bottom: rem(40px);
@@ -84,4 +84,8 @@
   &.active {
   border: 6px solid $dark-green;   
   }
+}
+
+.comments__link {
+  display: block;
 }
