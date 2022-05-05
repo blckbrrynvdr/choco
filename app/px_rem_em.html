@@ -6,20 +6,119 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PX EM REM</title>
-    <link rel="stylesheet" href="./css/main.css">
 </head>
+<style>
+    html {
+        font-size: 20px;
+    }
+
+    .block {
+        margin-bottom: 30px;
+    }
+
+    .component-px {
+        background: white;
+        border: 2px solid #7F7CFF;
+    }
+
+    .component-px__header {
+        font-size: 30px;
+        padding: 5px 15px;
+        background: #7F7CFF;
+        margin: 0;
+    }
+
+    .component-px__text {
+        font-size: 20px;
+        padding: 5px 15px;
+    }
+
+
+    .component-rem {
+        background: white;
+        border: 2px solid #7F7CFF;
+    }
+
+    .component-rem__header {
+        font-size: 2rem;
+        padding: 0.5rem 1.5rem;
+        background: #7F7CFF;
+        margin: 0;
+    }
+
+    .component-rem__text {
+        font-size: 1.6rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+
+    .component-em {
+        background: white;
+        border: 2px solid #7F7CFF;
+        font-size: 20px;
+    }
+
+    .component-em__header {
+        font-size: 2em;
+        padding: 0.5em 1.5em;
+        background: #7F7CFF;
+        margin: 0;
+    }
+
+    .component-em__text {
+        font-size: 1em;
+        padding: 0.5em 1.5em;
+    }
+
+
+    @media screen and (max-width: 1000px) {
+        html {
+            font-size: 16px;
+        }
+
+        .component-px__header {
+            font-size: 20px;
+            padding: 5px;
+        }
+
+        .component-px__text {
+            font-size: 14px;
+            padding: 5px;
+        }
+
+        .component-em {
+            font-size: 16px;
+        }
+
+    }
+    @media screen and (max-width: 480px) {
+        .component-px__header {
+            font-size: 16px;
+            padding: 5px;
+        }
+
+        .component-px__text {
+            font-size: 12px;
+            padding: 5px;
+        }
+    }
+</style>
 
 <body>
 
-    <div class="header header--large">Заголовок</div>
+    <div class="block component-px">
+        <div class="component-px__header">Блок с px</div>
+        <p class="component-px__text">Некий текст внутри параграфа</p>
+    </div>
+    <div class="block component-rem">
+        <div class="component-rem__header">Блок с rem</div>
+        <p class="component-rem__text">Некий текст внутри параграфа</p>
+    </div>
+    <div class="block component-em">
+        <div class="component-em__header">Блок с em</div>
+        <p class="component-em__text">Некий текст внутри параграфа</p>
+    </div>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, omnis.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quisquam laboriosam eligendi eius. Omnis
-        cupiditate pariatur obcaecati itaque inventore dolorum?</p>
-
-    <div class="header">Заголовок</div>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus blanditiis, quaerat quis eius magni adipisci
-        debitis dolorem nemo neque quam harum minima cupiditate nisi, nam distinctio itaque velit vel aperiam.</p>
 
 </body>
 

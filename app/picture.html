@@ -9,16 +9,56 @@
 </head>
 <body>
 
+    <picture>
+        <source 
+            srcset="images/example/phones-s.webp" 
+            media="(max-width: 480px)" 
+            alt="<=480"
+            type="image/webp"
+        >
+        <source 
+            srcset="images/example/phones-m.webp" 
+            media="(max-width: 768px)" 
+            alt="<=768" 
+            type="image/webp"
+        >
+        <source 
+            srcset="images/example/phones.webp" 
+            media="(min-width: 769px)" 
+            alt=">=768" 
+            type="image/webp"
+        >
+        <img src="images/example/phones.png" alt="tag img">
+    </picture>
     
 
-    <picture>
-        <source srcset="images/choco/mobile.png, images/choco/mobile-retina.png 2x,
-                        images/choco/mobile-3x.png 3x" 
-                        media="(max-width: 480px)" alt="<=480">
-        <source srcset="images/choco/tablet.png, images/choco/tablet-retina.png 2x" media="(max-width: 768px)" alt="<=768">
-        <source srcset="images/choco/desk.png, images/choco/desk-retina.png 2x" media="(min-width: 769px)" alt=">=768">
-        <img srcset="images/choco/desk.png, images/choco/desk-retina.png 2x" src="default.jpg" alt="tag img">
-    </picture>
+    <!-- порядок pixel ratio важен! -->
+
+    <!-- <picture>
+        <source 
+            srcset="images/choco/mobile-3x.png 3x,
+             images/choco/mobile-retina.png 2x,
+             images/choco/mobile.png" 
+            media="(max-width: 480px)" 
+            alt="<=480"
+            type="image/png"
+        >
+        <source 
+            srcset="images/choco/tablet-retina.png 2x, images/choco/tablet.png" 
+            media="(max-width: 768px)" 
+            alt="<=768" 
+            type="image/png"
+        >
+        <source 
+            srcset="images/choco/desk-retina.png 2x, images/choco/desk.png" 
+            media="(min-width: 769px)" 
+            alt=">=768" 
+            type="image/png"
+        >
+        <img src="default.jpg" alt="tag img">
+    </picture> -->
+
+    
     
 </body>
 </html>

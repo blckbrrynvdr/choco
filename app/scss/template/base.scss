@@ -140,17 +140,17 @@ img {
 			
 			align-items: center;
 		}
-		&::after {
-			content: '';
-			width: 100%;
-			height: rem(353px);
-			position: absolute;
-			bottom: rem(-130px);
-			background: url(../images/main-down-bg.png) center center / contain no-repeat;
-			@include tablets {
-				display: none;
-			}
-		}
+		// &::after {
+			// content: '';
+			// width: 100%;
+			// height: rem(353px);
+			// position: absolute;
+			// bottom: rem(-130px);
+			// background: url(../images/main-down-bg.png) center center / contain no-repeat;
+			// @include tablets {
+			// 	display: none;
+			// }
+		// }
 		
 	}
 	&--footer {

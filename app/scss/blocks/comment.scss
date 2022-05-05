@@ -30,21 +30,28 @@
 
 .comment__desc {
   padding-top: rem(10px);
+  font-size: 18px;
+
+  @include tablets {
+    font-size: 16px;
+  }
 }
 
 .comment__title {
-  font-size: rem(30px);
+  font-size: 1.5em;
   font-family: $medium;
-  margin-bottom: rem(30px);
+  margin-bottom: 0.8em;
 }
 
 .comment__text {
   font-family: $regular;
   color: $gray;
-  margin-bottom: rem(30px);
+  font-size: 1em;
+  margin-bottom: 0.8em;
 }
 
 .comment__author {
   font-family: $medium;
   color: $gray;
+  font-size: 1em;
 }
