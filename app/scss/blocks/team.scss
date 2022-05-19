@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   z-index: 2;
-  min-height: rem(480px);
+  // min-height: rem(480px);
   @include tablets {
     flex-direction: column;
     justify-content: center;
@@ -33,9 +33,6 @@
   &.active {
     .team__name:after {
       transform: rotate(180deg);
-    }
-    .team__desc {
-      height: 100%;
     }
     @include tablets {
       margin-bottom: rem(32px);

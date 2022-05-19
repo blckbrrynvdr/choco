@@ -1,0 +1,57 @@
+.assortment-composition {
+    position: relative;
+    display: inline-flex;
+
+    &:hover {
+        .assortment-composition__list {
+            left: 100%;
+            opacity: 1;
+        }
+    }
+}
+
+.assortment-composition__list {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    top: 0;
+    background: #d5d5d5;
+    padding: 12px 15px;
+    border-radius: 4px;
+    min-width: 273px;
+    transition: opacity .3s;
+}
+
+
+.assortment-composition__button {
+    background-color: #86c3d7;
+    color: #ffffff;
+    padding: 12px 22px;
+    border-radius: 4px;
+}
+
+.assortment-composition__button-ico {
+    width: 46px;
+    height: 46px;
+    fill: #ffffff;
+}
+
+.assortment-composition__item {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+}
+
+.assortment-composition__icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    margin-bottom: 8px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.assortment-composition__weight {
+    margin-left: auto;
+}

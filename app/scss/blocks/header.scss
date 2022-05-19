@@ -11,29 +11,31 @@
 
 .header__nav {
     width: 70%;
-    &.active {
+    @include tablets {
         position: fixed;
         width: 100%;
-        height: 100%;
-        left: 0;
+        height: 100vh;
+        left: -100%;
         top: 0;
         display: flex;
         z-index: 4;
         justify-content: center;
         align-items: center;
         background-color: #0d0d0df5;
-        .header-menu {
-            flex-direction: column;
-            height: 54%;
-            text-align: center;
-            font-size: rem(36px);
+        &.active {
+            left: 0;
         }
-    }
-    @include tablets {
-        display: none;
     }
 }
 
+.header-menu {
+    @include tablets {
+        flex-direction: column;
+        height: 54%;
+        text-align: center;
+        font-size: rem(36px);
+    }
+}
 .header__phone {
     display: flex;
     align-items: center;

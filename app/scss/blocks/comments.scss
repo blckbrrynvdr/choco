@@ -1,6 +1,6 @@
 .comments {
   &:before {
-    content: '';
+    content: "";
     width: rem(173px);
     height: rem(99px);
     position: absolute;
@@ -12,7 +12,7 @@
     }
   }
   &:after {
-    content: '';
+    content: "";
     width: rem(158px);
     height: rem(422px);
     position: absolute;
@@ -44,7 +44,7 @@
     width: 100%;
   }
   &:before {
-    content: '';
+    content: "";
     width: rem(90px);
     height: rem(90px);
     background-color: #fff;
@@ -55,7 +55,7 @@
     transform: translateX(-50%);
   }
   &:after {
-    content: '';
+    content: "";
     width: rem(127px);
     height: rem(167px);
     position: absolute;
@@ -76,12 +76,25 @@
   height: rem(100px);
   border-radius: 50%;
   overflow: hidden;
-  border: 6px solid transparent;
   margin-right: rem(40px);
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    border: 6px solid transparent;
+    z-index: 2;
+    border-radius: 50%;
+  }
   &:last-child {
     margin-right: 0;
   }
   &.active {
-  border: 6px solid $dark-green;   
+    &::before {
+      border: 6px solid $dark-green;
+    }
   }
 }
