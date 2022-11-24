@@ -1,7 +1,7 @@
 .team__list {
   display: flex;
-  justify-content: space-between;
-  z-index: 2;
+  column-gap: 20px;
+  // z-index: 2;
   min-height: rem(480px);
   @include tablets {
     flex-direction: column;
@@ -16,9 +16,10 @@
 }
 
 .team__card {
-  width: 24%;
+  flex: 1;
   text-align: center;
   @include tablets {
+    flex: initial;
     width: 100%;
     max-width: 222px;
     text-align: center;
@@ -83,6 +84,10 @@
     transition: transform .3s ease-out;
     background: url(../images/team/polygon.png) center center / contain no-repeat;
   }
+
+  // &--active + .team__desc {
+  //    max-height: 100%;
+  // }
 }
 
 .team__desc {

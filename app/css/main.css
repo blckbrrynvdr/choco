@@ -928,7 +928,6 @@ template {
   }
 }
 .animated.flip {
-  -webkit-backface-visibility: visible;
   backface-visibility: visible;
   animation-name: flip;
 }
@@ -954,7 +953,6 @@ template {
   }
 }
 .flipInX {
-  -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
   animation-name: flipInX;
 }
@@ -980,7 +978,6 @@ template {
   }
 }
 .flipInY {
-  -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
   animation-name: flipInY;
 }
@@ -1000,7 +997,6 @@ template {
 .flipOutX {
   animation-duration: 0.75s;
   animation-name: flipOutX;
-  -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
 }
 @keyframes flipOutY {
@@ -1018,7 +1014,6 @@ template {
 }
 .flipOutY {
   animation-duration: 0.75s;
-  -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
   animation-name: flipOutY;
 }
@@ -1901,31 +1896,29 @@ img {
 
 .header__nav {
   width: 70%;
-}
-.header__nav.active {
   position: fixed;
   width: 100%;
   height: 100vh;
-  left: 0;
+  left: -100%;
   top: 0;
+  opacity: 0;
   display: flex;
   z-index: 4;
   justify-content: center;
   align-items: center;
-  background-color: #0d0d0df5;
+  background-color: rgba(13, 13, 13, 0.9607843137);
+  transition: left 0.3s, opacity 0.3s;
 }
-.header__nav.active .header-menu {
+.header__nav .header-menu {
   flex-direction: column;
   height: 54%;
   text-align: center;
   font-size: 2rem;
 }
-@media (max-width: 768px) {
-  .header__nav {
-    display: none;
-  }
+.header__nav.active {
+  left: 0;
+  opacity: 1;
 }
-
 .header__phone {
   display: flex;
   align-items: center;
@@ -2514,8 +2507,7 @@ img {
 
 .team__list {
   display: flex;
-  justify-content: space-between;
-  z-index: 2;
+  column-gap: 20px;
   min-height: 26.6666666667rem;
 }
 @media (max-width: 768px) {
@@ -2533,11 +2525,12 @@ img {
 }
 
 .team__card {
-  width: 24%;
+  flex: 1;
   text-align: center;
 }
 @media (max-width: 768px) {
   .team__card {
+    flex: initial;
     width: 100%;
     max-width: 222px;
     text-align: center;
@@ -3098,7 +3091,7 @@ img {
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: #0000005e;
+  background-color: rgba(0, 0, 0, 0.368627451);
   display: flex;
   justify-content: center;
   align-items: center;

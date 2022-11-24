@@ -1,82 +1,82 @@
 /*бургер меню*/
-var hamburgerMenu = document.querySelector('#hamburgerMenu'); /**находим само меню */
-var hamburgerButton = document.querySelector('#hamburgerButton'); /**находим кнопку меню */
+// var hamburgerMenu = document.querySelector('#hamburgerMenu'); /**находим само меню */
+// var hamburgerButton = document.querySelector('#hamburgerButton'); /**находим кнопку меню */
 
-openingMenu(hamburgerMenu, hamburgerButton); /**мы можем вызвать нашу функцию до описания */
+// openingMenu(hamburgerMenu, hamburgerButton); /**мы можем вызвать нашу функцию до описания */
 
-function openingMenu(menu, button) { /**обозначаем функцию открытия/закрытия нешего меню*/
+// function openingMenu(menu, button) { /**обозначаем функцию открытия/закрытия нешего меню*/
 
-    function toggleMenu(menu, button) { /**модуль функции открытия закрытия */
-        menu.classList.toggle('active'); /**передаём аргументом наше меню, добавляем/снимаем активный класс */
-        button.classList.toggle('is-active'); /**тоже самое с кнопкой */
-        menu.classList.remove('fadeOut'); /**и снятие класса анимации закрытия */
-    }
+//     function toggleMenu(menu, button) { /**модуль функции открытия закрытия */
+//         menu.classList.toggle('active'); /**передаём аргументом наше меню, добавляем/снимаем активный класс */
+//         button.classList.toggle('is-active'); /**тоже самое с кнопкой */
+//         menu.classList.remove('fadeOut'); /**и снятие класса анимации закрытия */
+//     }
 
-    button.addEventListener('click', function() { /** добавляем обработчик события нажатия на кнопку */
-        if (this.classList.contains('is-active')) { /**если наша кнопка имеет класс is-active то*/
-            menu.classList.add('fadeOut'); /** добавляем анимацию закрытия */
-            setTimeout(() => { /** и через короткую паузу */
-                toggleMenu(menu, button); /**запускаем функцию  toggleMenu описанную ранее*/
-            }, 400); /**пауза равна 400 мс */
-        } else { /**если же у нашей кнопки нет активного класса */
-            toggleMenu(menu, button); /**то мы добавляем при помощи функции toggleMenu описанной ранее*/
-        }
-    });
+//     button.addEventListener('click', function() { /** добавляем обработчик события нажатия на кнопку */
+//         if (this.classList.contains('is-active')) { /**если наша кнопка имеет класс is-active то*/
+//             menu.classList.add('fadeOut'); /** добавляем анимацию закрытия */
+//             setTimeout(() => { /** и через короткую паузу */
+//                 toggleMenu(menu, button); /**запускаем функцию  toggleMenu описанную ранее*/
+//             }, 400); /**пауза равна 400 мс */
+//         } else { /**если же у нашей кнопки нет активного класса */
+//             toggleMenu(menu, button); /**то мы добавляем при помощи функции toggleMenu описанной ранее*/
+//         }
+//     });
 
-    menu.addEventListener('click', function(event) { /**так же мы следим за кликами внутри меню */
-        event.preventDefault(); /**запрещаем действие по-умолчанию чтоб не работало стандартное поведение ссылок */
-        var target = event.target; /**создаём переменную target которой присваиваем  */
+//     menu.addEventListener('click', function(event) { /**так же мы следим за кликами внутри меню */
+//         event.preventDefault(); /**запрещаем действие по-умолчанию чтоб не работало стандартное поведение ссылок */
+//         var target = event.target; /**создаём переменную target которой присваиваем  */
 
-        if (target.classList.contains('header-menu__link') && menu.classList.contains('active')) { /**ЕСЛИ целью клика является ссылка меню И если наше меню активно(имеет класс active в данном случае) ТО*/
-            menu.classList.add('fadeOut'); /**мы добавляем меню класс закрывающей анимации */
-            setTimeout(() => { /**ставим задержку чтоб наша анимация успела пройти */
-                menu.classList.remove('active'); /**снимаем с меню и кнопки активные классы */
-                button.classList.remove('is-active'); /**тем самым как бы закрывая меню */
-            }, 400); /**и это происходит через 400мс после клика */
-        }
-    });
-}
-
-
+//         if (target.classList.contains('header-menu__link') && menu.classList.contains('active')) { /**ЕСЛИ целью клика является ссылка меню И если наше меню активно(имеет класс active в данном случае) ТО*/
+//             menu.classList.add('fadeOut'); /**мы добавляем меню класс закрывающей анимации */
+//             setTimeout(() => { /**ставим задержку чтоб наша анимация успела пройти */
+//                 menu.classList.remove('active'); /**снимаем с меню и кнопки активные классы */
+//                 button.classList.remove('is-active'); /**тем самым как бы закрывая меню */
+//             }, 400); /**и это происходит через 400мс после клика */
+//         }
+//     });
+// }
 
 
 
 
-/**вертикальный аккордеон */
 
-let teamList = document.querySelector('.team__list');
 
-verticalAccordeon(teamList);
+// /**вертикальный аккордеон */
 
-function verticalAccordeon(element) {
+// let teamList = document.querySelector('.team__list');
 
-    element.addEventListener('click', function(e) {
-        e.preventDefault();
-        let teamCards = document.querySelectorAll('.team__card');
-        let targetIsPicture = e.target.classList.contains('team__pic');
-        let targetIsName = e.target.classList.contains('team__name');
-        let teamCardParent = e.target.closest('.team__card');
-        let teamCardDesc = teamCardParent.lastElementChild;
-        let teamCardDescHeight = teamCardDesc.scrollHeight;
+// verticalAccordeon(teamList);
 
-        if (targetIsPicture || targetIsName) {
+// function verticalAccordeon(element) {
 
-            if (teamCardParent.classList.contains("active")) {
-                teamCardParent.classList.remove('active');
-                teamCardDesc.style.height = 0 + 'px';
-            } else {
-                for (let i = 0; i < teamCards.length; i++) {
-                    const teamCard = teamCards[i];
-                    teamCard.classList.remove('active');
-                    teamCard.lastElementChild.style.height = 0 + 'px';
-                }
-                teamCardParent.classList.add('active');
-                teamCardDesc.style.height = teamCardDescHeight + 'px';
-            }
-        }
+//     element.addEventListener('click', function(e) {
+//         e.preventDefault();
+//         let teamCards = document.querySelectorAll('.team__card');
+//         let targetIsPicture = e.target.classList.contains('team__pic');
+//         let targetIsName = e.target.classList.contains('team__name');
+//         let teamCardParent = e.target.closest('.team__card');
+//         let teamCardDesc = teamCardParent.lastElementChild;
+//         let teamCardDescHeight = teamCardDesc.scrollHeight;
 
-    });
-}
+//         if (targetIsPicture || targetIsName) {
+
+//             if (teamCardParent.classList.contains("active")) {
+//                 teamCardParent.classList.remove('active');
+//                 teamCardDesc.style.height = 0 + 'px';
+//             } else {
+//                 for (let i = 0; i < teamCards.length; i++) {
+//                     const teamCard = teamCards[i];
+//                     teamCard.classList.remove('active');
+//                     teamCard.lastElementChild.style.height = 0 + 'px';
+//                 }
+//                 teamCardParent.classList.add('active');
+//                 teamCardDesc.style.height = teamCardDescHeight + 'px';
+//             }
+//         }
+
+//     });
+// }
 
 
 /**горизонтальный аккордеон */

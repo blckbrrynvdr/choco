@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <div class="element">1</div>
+        <div class="element">2</div>
+        <div class="element">3</div>
+        <div class="element">4</div>
+    </div>
+
+    <script>
+        let parentDiv = document.getElementById('container');
+        let nodeListDivs = document.querySelectorAll('.element');
+        let htmlCollectionDivs = document.getElementsByClassName('element');
+        nodeListDivs.length; //=> 4
+        htmlCollectionDivs.length; //=> 4
+
+        function divToConsole(e) {
+            console.log('div event target is', e.target);
+        }
+
+        //добавим новый дочерний контейнер
+        var newDiv = document.createElement('div');
+        newDiv.className = 'element';
+        newDiv.textContent = 5;
+        // newDiv.addEventListener('click', divToConsole);
+        parentDiv.appendChild(newDiv);
+
+        // htmlCollectionDivs.forEach((element) => {
+        //     element.addEventListener('click', divToConsole);
+        // })
+
+        // for (let i = 0; i < htmlCollectionDivs.length; i++) {
+        //     const element = htmlCollectionDivs[i];
+        //     element.addEventListener('click', divToConsole);
+        // }
+
+        const collectionArray = Array.from(htmlCollectionDivs);
+
+        collectionArray.forEach((element) => {
+            element.addEventListener('click', divToConsole);
+        })
+
+
+        console.log('nodeListDivs.length', nodeListDivs.length, nodeListDivs); //=> 4
+        console.log('htmlCollectionDivs.length', htmlCollectionDivs.length, htmlCollectionDivs); //=> 5
+    </script>
+</body>
+
+</html>
